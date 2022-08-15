@@ -1,0 +1,12 @@
+#! /bin/sh
+
+# Test that the dpkg hook does not error for invalid dpkg archictures.
+# Regression test for 920553.
+
+set -e
+
+# This is an intentionally invalid architecture.
+dpkg --add-architecture x86
+apt-get install sash
+
+exit 0

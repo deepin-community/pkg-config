@@ -1,0 +1,2 @@
+Tests: crosswrapper foreign-arch invalid-arch
+Restrictions: needs-root, allow-stderr

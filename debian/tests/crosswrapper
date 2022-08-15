@@ -1,0 +1,7 @@
+#! /bin/sh
+
+set -e
+
+ln -s /usr/share/pkg-config-crosswrapper $AUTOPKGTEST_TMP/i686-linux-gnu-pkg-config
+[ "$($AUTOPKGTEST_TMP/i686-linux-gnu-pkg-config --modversion pkg-config)" = "$(pkg-config --modversion pkg-config)" ]
+exit $?

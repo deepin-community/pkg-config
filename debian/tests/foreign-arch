@@ -1,0 +1,12 @@
+#! /bin/sh
+
+set -e
+
+dpkg --add-architecture i386
+
+if [ ! -x /usr/bin/i686-linux-gnu-pkg-config ]; then
+    echo "cross symlink missing"
+    echo "pkg-config symlinks found: $(find /usr/bin/ -name \*pkg-config)"
+    exit 1
+fi
+exit 0

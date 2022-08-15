@@ -1,0 +1,24 @@
+Source: pkg-config
+Section: devel
+Priority: optional
+Maintainer: Deepin Developer <deepin-dev@deepin.org>
+Build-Depends: debhelper-compat (= 10), dh-autoreconf, libglib2.0-dev
+Homepage: http://pkg-config.freedesktop.org
+Standards-Version: 3.8.4
+Rules-Requires-Root: no
+
+Package: pkg-config
+Architecture: any
+Multi-Arch: foreign
+Depends: ${shlibs:Depends}, ${misc:Depends},
+ libdpkg-perl
+Suggests: dpkg-dev
+Conflicts: pkg-config-bin
+Replaces: pkg-config-bin
+Description: manage compile and link flags for libraries
+ pkg-config is a system for managing library compile and link flags that 
+ works with automake and autoconf.
+ .
+ Increasingly libraries ship with ".pc" files that allow querying of the
+ compiler and linker flags needed to use them through the pkg-config(1)
+ program.
